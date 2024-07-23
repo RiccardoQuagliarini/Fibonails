@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+
+#remove all .tmp files
+*.tmp
+
+# remove everthing within folders named "old"
+**/old/**
+

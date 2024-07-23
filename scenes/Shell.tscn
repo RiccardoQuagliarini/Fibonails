@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnfw0oh40qsey"]
+
+[ext_resource type="Script" path="res://scripts/Shell.gd" id="1_3ldiq"]
+[ext_resource type="Script" path="res://scripts/Mantel.gd" id="2_ctw2r"]
+
+[node name="Shell" type="Node2D"]
+script = ExtResource("1_3ldiq")
+
+[node name="Mantel" type="Line2D" parent="."]
+z_index = 1
+script = ExtResource("2_ctw2r")
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+exclusive = false
+
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]
+[connection signal="custom_action" from="AcceptDialog" to="." method="_on_accept_dialog_custom_action"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dll71d3112s2l"]
+
+[ext_resource type="PackedScene" uid="uid://dnfw0oh40qsey" path="res://scenes/Shell.tscn" id="1_abrra"]
+[ext_resource type="Script" path="res://scripts/Camera.gd" id="1_npggs"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_npggs")
+
+[node name="Shell" parent="." instance=ExtResource("1_abrra")]
